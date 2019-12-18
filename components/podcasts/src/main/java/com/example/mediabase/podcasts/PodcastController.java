@@ -37,7 +37,7 @@ public class PodcastController {
     @GetMapping()
     public String allPodcasts(Map<String, Object> model) {
 
-        return "";
+        return "/podcasts";
     }
 
 }
