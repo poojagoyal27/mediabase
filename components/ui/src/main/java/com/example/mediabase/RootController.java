@@ -16,7 +16,8 @@ public class RootController {
     private PodcastClient podcastsClient;
     private PodcastsInitialList podcastsInitialList;
      private MoviesInitialList moviesInitialList;
-    public RootController(MovieClient moviesClient, PodcastClient podcastsClient, MoviesInitialList moviesInitialList,PodcastsInitialList podcastsInitialLis) {
+
+    public RootController(MovieClient moviesClient, PodcastClient podcastsClient, MoviesInitialList moviesInitialList,PodcastsInitialList podcastsInitialList) {
         this.moviesClient = moviesClient;
         this.podcastsClient = podcastsClient;
         this.moviesInitialList =moviesInitialList;
