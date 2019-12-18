@@ -27,18 +27,9 @@ public class PodcastController {
         return new ResponseEntity<>(HttpStatus.CREATED);
     }
 
-    @DeleteMapping("/{id}")
-    public ResponseEntity<Podcast> delete(@PathVariable Long id) {
-        Optional<Podcast> doomed = podcastsRepository.findById(id);
-        if (doomed != null) podcastsRepository.delete(doomed.get());
-        HttpStatus status = (doomed != null) ? HttpStatus.NO_CONTENT : HttpStatus.NOT_FOUND;
-        return new ResponseEntity<>(status);
+    public List<Podcast> getAll() {
+        List<Podcast> podcasts = new ArrayList<>();
+        podcastsRepository.findAll().forEach(podcasts::add);
+        return podcasts;
     }
-
-    @GetMapping
-    public List<Podcast>  getAll() {
-
-        return (List<Podcast>) podcastsRepository.findAll();
-    }
-
 }
