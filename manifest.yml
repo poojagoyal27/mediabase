@@ -6,9 +6,9 @@ applications:
     services:
       - movies-ms-database
   - name: podcasts-pd
-    path: applications/podcasts-ms/build/libs/podcasts-ms-1.0-SNAPSHOT.jar
+    path: applications/podcasts-pd/build/libs/podcasts-pd-1.0-SNAPSHOT.jar
     routes:
-      - route: gp-podcasts-ms.apps.pcf.cpstraining.perficient.com
+      - route: gp-podcasts-pd.apps.pcf.cpstraining.perficient.com
     services:
       - podcasts-pd-database
   - name: mediabase
@@ -17,4 +17,4 @@ applications:
       - route: gp-mediabase.apps.pcf.cpstraining.perficient.com
     env:
       MOVIES_MS_URL: http://gp-movies-ms.apps.pcf.cpstraining.perficient.com/movies
-      PODCASTS_MS_URL: http://gp-podcasts-ms.apps.pcf.cpstraining.perficient.com/podcasts
+      PODCASTS_PD_URL: http://gp-podcasts-pd.apps.pcf.cpstraining.perficient.com/podcasts
