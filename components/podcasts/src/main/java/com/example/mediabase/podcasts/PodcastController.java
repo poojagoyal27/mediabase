@@ -27,6 +27,7 @@ public class PodcastController {
         return new ResponseEntity<>(HttpStatus.CREATED);
     }
 
+    @GetMapping
     public List<Podcast> getAll() {
         List<Podcast> podcasts = new ArrayList<>();
         podcastsRepository.findAll().forEach(podcasts::add);
