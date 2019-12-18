@@ -10,7 +10,7 @@ applications:
     routes:
       - route: gp-podcasts-pd.apps.pcf.cpstraining.perficient.com
     services:
-      - podcasts-pd-database
+      - podcasts-ms-database
   - name: mediabase
     path: applications/mediabase/build/libs/mediabase-1.0-SNAPSHOT.war
     routes:
