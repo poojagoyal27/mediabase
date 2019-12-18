@@ -10,8 +10,9 @@ version '1.0-SNAPSHOT'
 
 
 dependencies {
-    compile project(":components:movies")
-    compile project(":components:podcasts")
+    compile project(":components:ui")
+    //compile project(":components:movies")
+    //compile project(":components:podcasts")
     compile('taglibs:standard:1.1.2')
 
     compile('taglibs:standard:1.1.2')
@@ -21,10 +22,10 @@ dependencies {
     compile('org.apache.geronimo.specs:geronimo-osgi-locator:1.1')
     compile('org.apache.geronimo.components:geronimo-jaspi:2.0.0')
 
-    compile('org.springframework.boot:spring-boot-starter-data-jpa')
+  //  compile('org.springframework.boot:spring-boot-starter-data-jpa')
     compile('org.springframework.boot:spring-boot-starter-web')
     compile('org.springframework.boot:spring-boot-starter-tomcat')
-    compile('mysql:mysql-connector-java:8.0.18')
+  //  compile('mysql:mysql-connector-java:8.0.18')
     compile('commons-lang:commons-lang:2.4')
     testCompile('org.springframework.boot:spring-boot-starter-test')
 }
