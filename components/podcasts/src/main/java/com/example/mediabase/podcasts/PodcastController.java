@@ -34,10 +34,9 @@ public class PodcastController {
         return new ResponseEntity<>(status);
     }
 
-    @GetMapping()
+    @GetMapping("/podcasts")
     public String allPodcasts(Map<String, Object> model) {
-
-        return "/podcasts";
+        model.put("podcasts", podcastsRepository.findAll() );
+        return "podcasts";
     }
-
 }
