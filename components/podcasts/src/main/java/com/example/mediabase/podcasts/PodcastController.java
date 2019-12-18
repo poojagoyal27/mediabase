@@ -15,7 +15,7 @@ public class PodcastController {
 
     private PodcastRepository podcastsRepository;
 
-    public PodcastController(PodcastRepository podcasstRepository) {
+    public PodcastController(PodcastRepository podcastsRepository) {
         this.podcastsRepository = podcastsRepository;
     }
 
