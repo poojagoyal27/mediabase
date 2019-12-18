@@ -5,6 +5,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 import java.util.Optional;
@@ -34,9 +35,10 @@ public class PodcastController {
         return new ResponseEntity<>(status);
     }
 
-    @GetMapping("/podcasts")
-    public String allPodcasts(Map<String, Object> model) {
-        model.put("podcasts", podcastsRepository.findAll() );
-        return "podcasts";
+    @GetMapping
+    public List<Podcast>  getAll() {
+
+        return (List<Podcast>) podcastsRepository.findAll();
     }
+
 }
