@@ -1,6 +1,8 @@
 server.port: 8081
 
 spring:
+  application:
+    name: movies-ms
   datasource:
     url: jdbc:mysql://localhost:3306/movies?useSSL=false&user=root&password=password
 
