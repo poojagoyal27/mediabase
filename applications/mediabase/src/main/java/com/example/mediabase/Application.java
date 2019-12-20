@@ -14,9 +14,9 @@ import com.example.mediabase.moviesui.ActionServlet;
 import com.example.mediabase.moviesui.MovieClient;
 import com.example.mediabase.podcastsui.PodcastClient;
 
-@EnableEurekaClient
-@SpringBootApplication
 @EnableCircuitBreaker
+@EnableEurekaClient
+@SpringBootApplication(exclude= {io.pivotal.spring.cloud.IssuerCheckConfiguration.class})
 public class Application {
 
 
@@ -24,17 +24,14 @@ public class Application {
     public static void main(String... args) {
         SpringApplication.run(Application.class, args);
     }
-
+    @LoadBalanced
     @Bean
     public ServletRegistrationBean registerActionServlet(ActionServlet actionServlet) {
         return new ServletRegistrationBean(actionServlet, "/moviefun/*");
     }
 
-    @LoadBalanced
-    @Bean
-    public RestOperations restOperations() {
-        return new RestTemplate();
-    }
+
+
 
     @Bean
     public MovieClient movieClient(RestOperations restOperations) {
